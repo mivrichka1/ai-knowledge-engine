@@ -1,0 +1,456 @@
+{
+  "dataset": "roberta-seed-v1",
+  "declared_source_version": "arXiv:1907.11692v1",
+  "note": "10 queries; partial anchor labels; source version is declared, not independently verified; not a reliable quality comparison.",
+  "document_index_version": 1,
+  "document_index_metadata": {
+    "page_count": 13,
+    "chunk_strategy": "model_tokenizer",
+    "chunk_size": 120,
+    "chunk_overlap": 16,
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "embedding_revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+  },
+  "search_settings": {
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "embedding_revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a"
+  },
+  "results": {
+    "keyword": {
+      "evaluation": {
+        "k": 5,
+        "answerable_count": 10,
+        "unanswerable_count": 0,
+        "metrics": {
+          "precision_at_k": 0.1,
+          "recall_at_k": 0.43333333333333335,
+          "mrr_at_k": 0.2783333333333333,
+          "hit_at_k": 0.5,
+          "ndcg_at_k": 0.3088960153735089
+        },
+        "per_query": [
+          {
+            "id": "roberta1",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.3333333333333333,
+            "mrr_at_k": 0.25,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.20210734650054757
+          },
+          {
+            "id": "roberta2",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta3",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta4",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta5",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta6",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.2,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.38685280723454163
+          },
+          {
+            "id": "roberta7",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta8",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.3333333333333333,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.5
+          },
+          {
+            "id": "roberta9",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta10",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          }
+        ]
+      },
+      "latency_ms": [
+        8.338374998857034,
+        3.755749999982072,
+        8.462499998131534,
+        4.134916001930833,
+        6.878625001263572,
+        2.2104169984231703,
+        3.015040998434415,
+        4.687791002652375,
+        3.185665998898912,
+        0.6270830017456319
+      ]
+    },
+    "vector": {
+      "evaluation": {
+        "k": 5,
+        "answerable_count": 10,
+        "unanswerable_count": 0,
+        "metrics": {
+          "precision_at_k": 0.12000000000000001,
+          "recall_at_k": 0.48333333333333334,
+          "mrr_at_k": 0.17333333333333334,
+          "hit_at_k": 0.6,
+          "ndcg_at_k": 0.23940690339893358
+        },
+        "per_query": [
+          {
+            "id": "roberta1",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.3333333333333333,
+            "mrr_at_k": 0.2,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.18154179253735267
+          },
+          {
+            "id": "roberta2",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.2,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.38685280723454163
+          },
+          {
+            "id": "roberta3",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta4",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta5",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6309297535714575
+          },
+          {
+            "id": "roberta6",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.25,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.43067655807339306
+          },
+          {
+            "id": "roberta7",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta8",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta9",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.5,
+            "mrr_at_k": 0.25,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.2640681225725909
+          },
+          {
+            "id": "roberta10",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.3333333333333333,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.5
+          }
+        ]
+      },
+      "latency_ms": [
+        26.409833000798244,
+        25.69937500084052,
+        26.007333002780797,
+        25.092374999076128,
+        24.544750001950888,
+        26.890708999417257,
+        26.101082999957725,
+        25.1514590017905,
+        25.287916003435384,
+        25.899625001329696
+      ]
+    },
+    "hybrid": {
+      "evaluation": {
+        "k": 5,
+        "answerable_count": 10,
+        "unanswerable_count": 0,
+        "metrics": {
+          "precision_at_k": 0.14,
+          "recall_at_k": 0.5833333333333334,
+          "mrr_at_k": 0.2916666666666667,
+          "hit_at_k": 0.7,
+          "ndcg_at_k": 0.3527781780717989
+        },
+        "per_query": [
+          {
+            "id": "roberta1",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.3333333333333333,
+            "mrr_at_k": 0.25,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.20210734650054757
+          },
+          {
+            "id": "roberta2",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6309297535714575
+          },
+          {
+            "id": "roberta3",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta4",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta5",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta6",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.25,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.43067655807339306
+          },
+          {
+            "id": "roberta7",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta8",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.3333333333333333,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.5
+          },
+          {
+            "id": "roberta9",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.5,
+            "mrr_at_k": 0.25,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.2640681225725909
+          },
+          {
+            "id": "roberta10",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.3333333333333333,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.5
+          }
+        ]
+      },
+      "latency_ms": [
+        34.411000000545755,
+        31.429376002051868,
+        36.002041000756435,
+        30.235582999011967,
+        33.8316669985943,
+        33.324583000649,
+        32.28812499946798,
+        31.23708400016767,
+        29.827874997863546,
+        27.423666997492546
+      ]
+    },
+    "hybrid_rerank": {
+      "evaluation": {
+        "k": 5,
+        "answerable_count": 10,
+        "unanswerable_count": 0,
+        "metrics": {
+          "precision_at_k": 0.16,
+          "recall_at_k": 0.65,
+          "mrr_at_k": 0.365,
+          "hit_at_k": 0.8,
+          "ndcg_at_k": 0.41847140515609
+        },
+        "per_query": [
+          {
+            "id": "roberta1",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta2",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6309297535714575
+          },
+          {
+            "id": "roberta3",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.5,
+            "mrr_at_k": 0.2,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.23719771276929622
+          },
+          {
+            "id": "roberta4",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta5",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta6",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.25,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.43067655807339306
+          },
+          {
+            "id": "roberta7",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.5,
+            "mrr_at_k": 0.2,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.23719771276929622
+          },
+          {
+            "id": "roberta8",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6309297535714575
+          },
+          {
+            "id": "roberta9",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.5,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.38685280723454163
+          },
+          {
+            "id": "roberta10",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6309297535714575
+          }
+        ]
+      },
+      "latency_ms": [
+        466.3594590019784,
+        465.4547079990152,
+        513.1390829992597,
+        495.5147510008828,
+        519.41912500115,
+        504.383458999655,
+        535.3534999994736,
+        457.02841700040153,
+        458.9659999983269,
+        432.94820899973274
+      ]
+    }
+  },
+  "dataset_sha256": "fddb5b7fb04ab8d092c84ffbfbf2c8c9402bf42f8967bda23728d0c2ce6b032b",
+  "input_pdf_sha256": "76a3872d244793563a5b000b818cbaf0ca8972ab1145d32be474c05b2a8f3070"
+}

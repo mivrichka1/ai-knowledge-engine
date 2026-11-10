@@ -1,0 +1,817 @@
+{
+  "dataset": "roberta-seed-v2",
+  "declared_source_version": "arXiv:1907.11692v1",
+  "note": "20 queries; partial anchor labels; source version is declared, not independently verified; not a reliable quality comparison.",
+  "document_index_version": 1,
+  "document_index_metadata": {
+    "page_count": 13,
+    "parser_version": "pdf-columns-v1",
+    "chunk_strategy": "model_tokenizer",
+    "chunk_size": 120,
+    "chunk_overlap": 16,
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "embedding_revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+  },
+  "search_settings": {
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "embedding_revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a"
+  },
+  "results": {
+    "keyword": {
+      "evaluation": {
+        "k": 5,
+        "answerable_count": 20,
+        "unanswerable_count": 0,
+        "metrics": {
+          "precision_at_k": 0.13,
+          "recall_at_k": 0.5416666666666666,
+          "mrr_at_k": 0.39916666666666667,
+          "hit_at_k": 0.6,
+          "ndcg_at_k": 0.4275612974115762
+        },
+        "per_query": [
+          {
+            "id": "roberta1",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.3333333333333333,
+            "mrr_at_k": 0.3333333333333333,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.23463936301137822
+          },
+          {
+            "id": "roberta2",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6309297535714575
+          },
+          {
+            "id": "roberta3",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta4",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta5",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta6",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta7",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta8",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6309297535714575
+          },
+          {
+            "id": "roberta9",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta10",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta11",
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta12",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta13",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.5,
+            "mrr_at_k": 0.2,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.23719771276929622
+          },
+          {
+            "id": "roberta14",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta15",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta16",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta17",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta18",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.25,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.43067655807339306
+          },
+          {
+            "id": "roberta19",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta20",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.2,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.38685280723454163
+          }
+        ]
+      },
+      "latency_ms": [
+        4.214458000205923,
+        4.860500001086621,
+        4.8107090005942155,
+        4.534582996711833,
+        2.63095899936161,
+        2.531709000322735,
+        0.7147920005081687,
+        4.454416000953643,
+        0.8113330004562158,
+        0.6956249999348074,
+        2.9123329986759927,
+        0.718749997759005,
+        2.5225000026694033,
+        4.477542002859991,
+        4.127542000787798,
+        1.67012499878183,
+        5.098625002574408,
+        5.2064999981666915,
+        4.327458998886868,
+        3.5449999995762482
+      ]
+    },
+    "vector": {
+      "evaluation": {
+        "k": 5,
+        "answerable_count": 20,
+        "unanswerable_count": 0,
+        "metrics": {
+          "precision_at_k": 0.14,
+          "recall_at_k": 0.5666666666666667,
+          "mrr_at_k": 0.37833333333333335,
+          "hit_at_k": 0.65,
+          "ndcg_at_k": 0.41657861919717615
+        },
+        "per_query": [
+          {
+            "id": "roberta1",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.3333333333333333,
+            "mrr_at_k": 0.2,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.18154179253735267
+          },
+          {
+            "id": "roberta2",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.2,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.38685280723454163
+          },
+          {
+            "id": "roberta3",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta4",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta5",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6309297535714575
+          },
+          {
+            "id": "roberta6",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.25,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.43067655807339306
+          },
+          {
+            "id": "roberta7",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta8",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta9",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.5,
+            "mrr_at_k": 0.25,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.2640681225725909
+          },
+          {
+            "id": "roberta10",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.3333333333333333,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.5
+          },
+          {
+            "id": "roberta11",
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta12",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6309297535714575
+          },
+          {
+            "id": "roberta13",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.5,
+            "mrr_at_k": 0.3333333333333333,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.3065735963827292
+          },
+          {
+            "id": "roberta14",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta15",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta16",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta17",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta18",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta19",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta20",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          }
+        ]
+      },
+      "latency_ms": [
+        25.818375001108507,
+        25.55758300150046,
+        26.44420800061198,
+        25.076832997001475,
+        24.68487500300398,
+        25.28337499825284,
+        25.321208999230294,
+        25.015874998643994,
+        25.13524999812944,
+        25.11183299793629,
+        25.33233400026802,
+        25.095667002460686,
+        24.673332998645492,
+        24.73574999748962,
+        25.045333000889514,
+        24.481332999130245,
+        25.12991599724046,
+        25.535083001159364,
+        25.114416999713285,
+        24.855916999513283
+      ]
+    },
+    "hybrid": {
+      "evaluation": {
+        "k": 5,
+        "answerable_count": 20,
+        "unanswerable_count": 0,
+        "metrics": {
+          "precision_at_k": 0.17,
+          "recall_at_k": 0.6916666666666667,
+          "mrr_at_k": 0.4625,
+          "hit_at_k": 0.75,
+          "ndcg_at_k": 0.5136420519340401
+        },
+        "per_query": [
+          {
+            "id": "roberta1",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.3333333333333333,
+            "mrr_at_k": 0.3333333333333333,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.23463936301137822
+          },
+          {
+            "id": "roberta2",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6309297535714575
+          },
+          {
+            "id": "roberta3",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta4",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta5",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta6",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.25,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.43067655807339306
+          },
+          {
+            "id": "roberta7",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta8",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.3333333333333333,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.5
+          },
+          {
+            "id": "roberta9",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.5,
+            "mrr_at_k": 0.25,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.2640681225725909
+          },
+          {
+            "id": "roberta10",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.3333333333333333,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.5
+          },
+          {
+            "id": "roberta11",
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta12",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6309297535714575
+          },
+          {
+            "id": "roberta13",
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6509209298071326
+          },
+          {
+            "id": "roberta14",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta15",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta16",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta17",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta18",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta19",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.25,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.43067655807339306
+          },
+          {
+            "id": "roberta20",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          }
+        ]
+      },
+      "latency_ms": [
+        28.903292000904912,
+        28.8545420007722,
+        29.44158399986918,
+        29.657875002158107,
+        26.581709000311093,
+        27.625874998193467,
+        25.764917001652066,
+        29.267459001857787,
+        25.941624997358304,
+        26.070874999277294,
+        28.0559999991965,
+        26.169207998464117,
+        27.852667000843212,
+        29.8276249995979,
+        29.464916999131674,
+        26.813417000084883,
+        33.20033399722888,
+        31.840875002671964,
+        30.715665998286568,
+        29.20095800072886
+      ]
+    },
+    "hybrid_rerank": {
+      "evaluation": {
+        "k": 5,
+        "answerable_count": 20,
+        "unanswerable_count": 0,
+        "metrics": {
+          "precision_at_k": 0.19,
+          "recall_at_k": 0.775,
+          "mrr_at_k": 0.5741666666666667,
+          "hit_at_k": 0.85,
+          "ndcg_at_k": 0.6189070227589085
+        },
+        "per_query": [
+          {
+            "id": "roberta1",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta2",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6309297535714575
+          },
+          {
+            "id": "roberta3",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.5,
+            "mrr_at_k": 0.2,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.23719771276929622
+          },
+          {
+            "id": "roberta4",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta5",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta6",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.25,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.43067655807339306
+          },
+          {
+            "id": "roberta7",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.5,
+            "mrr_at_k": 0.2,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.23719771276929622
+          },
+          {
+            "id": "roberta8",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6309297535714575
+          },
+          {
+            "id": "roberta9",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.5,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.38685280723454163
+          },
+          {
+            "id": "roberta10",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6309297535714575
+          },
+          {
+            "id": "roberta11",
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta12",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta13",
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6934264036172708
+          },
+          {
+            "id": "roberta14",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "roberta15",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta16",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta17",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta18",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta19",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "roberta20",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.3333333333333333,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.5
+          }
+        ]
+      },
+      "latency_ms": [
+        407.3365419972106,
+        413.8659589989402,
+        409.8049999993236,
+        401.6154170021764,
+        403.16237500155694,
+        437.9878749969066,
+        443.4917090002273,
+        406.349583001429,
+        424.7597510002379,
+        412.82079099983093,
+        434.55783299941686,
+        414.68175100089866,
+        429.41358299867716,
+        427.75670799892396,
+        436.1797919991659,
+        437.9534589970717,
+        432.49287500293576,
+        439.635292001185,
+        452.73316699967836,
+        442.5675839993346
+      ]
+    }
+  },
+  "dataset_sha256": "ffd4f0e618f121b14d14fdc020d4fdbfb50f731bbf7005904c3bb5a7c9f7c7ea",
+  "input_pdf_sha256": "76a3872d244793563a5b000b818cbaf0ca8972ab1145d32be474c05b2a8f3070"
+}

@@ -1,0 +1,265 @@
+{
+  "dataset": "attention-seed-v1",
+  "source_version": "arXiv:1706.03762v7",
+  "dataset_sha256": "10ffdb8164adca1ebc9ed85806ce96be6a19821a4cb8dbfeec2ac026ffe4623f",
+  "note": "Five queries; partial anchor labels; not a reliable quality comparison.",
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "embedding_revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+  "chunking": "120 model tokens, 16 overlap",
+  "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+  "results": {
+    "keyword": {
+      "evaluation": {
+        "k": 5,
+        "answerable_count": 5,
+        "unanswerable_count": 0,
+        "metrics": {
+          "precision_at_k": 0.12000000000000001,
+          "recall_at_k": 0.4,
+          "mrr_at_k": 0.2,
+          "hit_at_k": 0.4,
+          "ndcg_at_k": 0.2509960547150591
+        },
+        "per_query": [
+          {
+            "id": "q1",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "q2",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "q3",
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6240505200038379
+          },
+          {
+            "id": "q4",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "q5",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6309297535714575
+          }
+        ]
+      },
+      "latency_ms": [
+        13.727292000112357,
+        3.966166999816778,
+        9.745999999722699,
+        8.604499999819382,
+        8.353041999725974
+      ]
+    },
+    "vector": {
+      "evaluation": {
+        "k": 5,
+        "answerable_count": 5,
+        "unanswerable_count": 0,
+        "metrics": {
+          "precision_at_k": 0.16,
+          "recall_at_k": 0.5,
+          "mrr_at_k": 0.5,
+          "hit_at_k": 0.6,
+          "ndcg_at_k": 0.4488153892673832
+        },
+        "per_query": [
+          {
+            "id": "q1",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "q2",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.5,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6131471927654584
+          },
+          {
+            "id": "q3",
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "q4",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "q5",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6309297535714575
+          }
+        ]
+      },
+      "latency_ms": [
+        3339.788168999803,
+        11.10587499988469,
+        29.040874999736843,
+        14.752833000784449,
+        8.363666999684938
+      ]
+    },
+    "hybrid": {
+      "evaluation": {
+        "k": 5,
+        "answerable_count": 5,
+        "unanswerable_count": 0,
+        "metrics": {
+          "precision_at_k": 0.2,
+          "recall_at_k": 0.7,
+          "mrr_at_k": 0.54,
+          "hit_at_k": 0.8,
+          "ndcg_at_k": 0.510130108543929
+        },
+        "per_query": [
+          {
+            "id": "q1",
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "mrr_at_k": 0.0,
+            "hit_at_k": 0.0,
+            "ndcg_at_k": 0.0
+          },
+          {
+            "id": "q2",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.5,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6131471927654584
+          },
+          {
+            "id": "q3",
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.9197207891481876
+          },
+          {
+            "id": "q4",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.2,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.38685280723454163
+          },
+          {
+            "id": "q5",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.5,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6309297535714575
+          }
+        ]
+      },
+      "latency_ms": [
+        16.986833000373736,
+        10.84050000008574,
+        15.914374999738357,
+        15.36641700022301,
+        16.426041999693552
+      ]
+    },
+    "hybrid_rerank": {
+      "evaluation": {
+        "k": 5,
+        "answerable_count": 5,
+        "unanswerable_count": 0,
+        "metrics": {
+          "precision_at_k": 0.24000000000000002,
+          "recall_at_k": 0.9,
+          "mrr_at_k": 0.84,
+          "hit_at_k": 1.0,
+          "ndcg_at_k": 0.8
+        },
+        "per_query": [
+          {
+            "id": "q1",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "q2",
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.5,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.6131471927654584
+          },
+          {
+            "id": "q3",
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          {
+            "id": "q4",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 0.2,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 0.38685280723454163
+          },
+          {
+            "id": "q5",
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "hit_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          }
+        ]
+      },
+      "latency_ms": [
+        12685.39617299939,
+        415.5093750005108,
+        485.98287500044535,
+        459.77570800005196,
+        409.0653339999335
+      ]
+    }
+  }
+}
