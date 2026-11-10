@@ -1,0 +1,53 @@
+import {test,expect} from '@playwright/test';
+
+test('register, upload, index and search a document', async ({page})=>{
+  await page.goto('/');
+  await page.getByRole('button',{name:'New here? Create an account'}).click();
+  await page.getByLabel('Email').fill(`e2e-${Date.now()}@example.com`);
+  await page.getByLabel('Password').fill('test-passphrase-2026');
+  await page.getByRole('button',{name:'Create account'}).click();
+  await expect(page.getByRole('heading',{name:'Knowledge workspace'})).toBeVisible();
+  await page.getByLabel('Knowledge base name').fill('E2E research');
+  await page.getByRole('button',{name:'＋',exact:true}).click();
+  await expect(page.getByText('No documents yet. Upload one to start indexing.')).toBeVisible();
+  await page.locator('input[type=file]').setInputFiles('e2e/fixtures/example.pdf');
+  await expect(page.locator('strong').getByText('example.pdf')).toBeVisible();
+  await expect(page.getByText('ready',{exact:true})).toBeVisible({timeout:120_000});
+  await page.getByLabel('Search query').fill('self attention');
+  await page.getByLabel('Search strategy').selectOption('keyword');
+  await page.getByRole('button',{name:'Search',exact:true}).click();
+  await expect(page.getByText('Self attention connects distant words in a sequence.')).toBeVisible();
+  if (process.env.AKE_CAPTURE_SCREENSHOT) {
+    await expect(page.locator('.stats > div').nth(0).locator('strong')).toHaveText('1');
+    await expect(page.locator('.stats > div').nth(1).locator('strong')).toHaveText('1');
+    await page.screenshot({path:process.env.AKE_CAPTURE_SCREENSHOT,fullPage:true});
+  }
+  await page.getByRole('button',{name:'Compare selected methods →'}).click();
+  await expect(page.getByRole('heading',{name:/keyword/i})).toBeVisible();
+  await expect(page.getByRole('heading',{name:/vector/i})).toBeVisible();
+  await page.getByRole('button',{name:'View',exact:true}).click();
+  await expect(page.getByRole('heading',{name:/keyword/i})).toHaveCount(0);
+  await expect(page.getByText('Self attention connects distant words in a sequence.')).toBeVisible();
+  const sourceLabel=await page.getByText(/^Source ID:/).first().textContent();
+  const chunkId=sourceLabel?.replace('Source ID:','').trim();
+  expect(chunkId).toBeTruthy();
+  await page.getByText('Create a labelled dataset').click();
+  await page.getByLabel('Dataset name').fill('Reviewed seed');
+  await page.getByLabel('Queries as JSON').fill(JSON.stringify([{id:'q1',question:'self attention',answerable:true,relevant_ids:[chunkId],category:'exact'}]));
+  await page.getByRole('button',{name:'Save dataset'}).click();
+  await page.getByRole('button',{name:'Run experiment'}).click();
+  await expect(page.getByText('Status: complete')).toBeVisible({timeout:120_000});
+  await expect(page.getByRole('table',{name:'Evaluation metrics'})).toBeVisible();
+  await page.getByRole('button',{name:'Reindex',exact:true}).click();
+  await expect(page.getByRole('button',{name:'Reindex',exact:true})).toBeDisabled();
+  await expect(page.getByText('ready',{exact:true})).toBeVisible({timeout:120_000});
+  const popupPromise=page.waitForEvent('popup');
+  await page.getByRole('button',{name:'Open document ↗'}).first().click();
+  const popup=await popupPromise;
+  await popup.waitForURL(/blob:/);
+  expect(popup.url()).toContain('#page=1');
+  await popup.close();
+  page.once('dialog', dialog => dialog.accept());
+  await page.getByRole('button',{name:'Delete',exact:true}).click();
+  await expect(page.locator('strong').getByText('example.pdf')).toHaveCount(0);
+});
