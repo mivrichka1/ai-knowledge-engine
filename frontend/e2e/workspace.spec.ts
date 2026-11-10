@@ -47,7 +47,7 @@ test('register, upload, index and search a document', async ({page})=>{
   const popupPromise=page.waitForEvent('popup');
   await page.getByRole('button',{name:'Open document ↗'}).first().click();
   const popup=await popupPromise;
-  await popup.waitForURL(/blob:/);
+  await popup.waitForURL(/blob:/, {waitUntil:'commit'});
   expect(popup.url()).toContain('#page=1');
   await popup.close();
   page.once('dialog', dialog => dialog.accept());
