@@ -1,3 +1,7 @@
+## Run in Google Colab
+
+[Open the Colab notebook](https://colab.research.google.com/github/mivrichka1/ai-knowledge-engine/blob/main/AI_Knowledge_Engine_Colab.ipynb) and run its cells in order. Setup, storage, and model downloads use the temporary Colab runtime. Data is lost when the runtime is reset. Generation requires a separately configured provider.
+
 # AI Knowledge Engine
 
 An in-progress document search and question-answering application. It is not yet the complete production-style system described in the specification; see the limitations below.
