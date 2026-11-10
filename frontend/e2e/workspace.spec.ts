@@ -22,7 +22,10 @@ test('register, upload, index and search a document', async ({page})=>{
     await expect(page.locator('.stats > div').nth(1).locator('strong')).toHaveText('1');
     await page.screenshot({path:process.env.AKE_CAPTURE_SCREENSHOT,fullPage:true});
   }
+  const comparisonResponse = page.waitForResponse(response => response.url().includes('/search/compare'), {timeout: 120_000});
   await page.getByRole('button',{name:'Compare selected methods →'}).click();
+  const comparison = await comparisonResponse;
+  expect(comparison.ok(), await comparison.text()).toBeTruthy();
   await expect(page.getByRole('heading',{name:/keyword/i})).toBeVisible();
   await expect(page.getByRole('heading',{name:/vector/i})).toBeVisible();
   await page.getByRole('button',{name:'View',exact:true}).click();
