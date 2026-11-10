@@ -1,0 +1,65 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: ake
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ake
+    volumes: [postgres_data:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ake -d ake"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  migrate:
+    build: ./backend
+    environment: &backend_env
+      DATABASE_URL: postgresql+asyncpg://ake:${POSTGRES_PASSWORD}@postgres:5432/ake
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET in .env}
+      DOCUMENT_STORAGE_PATH: /data/documents
+      MAX_UPLOAD_SIZE: ${MAX_UPLOAD_SIZE:-10000000}
+      MAX_CHUNKS_PER_DOCUMENT: ${MAX_CHUNKS_PER_DOCUMENT:-5000}
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL:-sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2}
+      EMBEDDING_REVISION: ${EMBEDDING_REVISION:-e8f8c211226b894fcb81acc59f3b34ba3efd5f42}
+      RERANKER_MODEL: ${RERANKER_MODEL:-cross-encoder/ms-marco-MiniLM-L-6-v2}
+      RERANKER_REVISION: ${RERANKER_REVISION:-233902d25c440f23af6f7d6e94d2946bac0bee0a}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      CHUNK_SIZE: ${CHUNK_SIZE:-120}
+      CHUNK_OVERLAP: ${CHUNK_OVERLAP:-16}
+      HF_HOME: /data/models
+      LLM_BASE_URL: ${LLM_BASE_URL:-https://api.openai.com/v1}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_MODEL: ${LLM_MODEL:-}
+    command: ["alembic", "upgrade", "head"]
+    depends_on:
+      postgres: {condition: service_healthy}
+  backend:
+    build: ./backend
+    environment: *backend_env
+    ports: ["127.0.0.1:8000:8000"]
+    volumes: [documents:/data/documents, models:/data/models]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health/ready', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+  worker:
+    build: ./backend
+    environment: *backend_env
+    command: ["python", "-m", "ake_backend.worker"]
+    volumes: [documents:/data/documents, models:/data/models]
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+  frontend:
+    build: ./frontend
+    environment:
+      API_PROXY: http://backend:8000
+    ports: ["127.0.0.1:5173:5173"]
+    depends_on:
+      backend: {condition: service_healthy}
+volumes:
+  postgres_data:
+  documents:
+  models:
