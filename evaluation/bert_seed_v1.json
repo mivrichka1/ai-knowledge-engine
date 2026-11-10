@@ -1,0 +1,68 @@
+{
+  "name": "bert-seed-v1",
+  "description": "Ten anchor questions; partial labels, not exhaustive relevance judgments.",
+  "source": "https://arxiv.org/abs/1810.04805",
+  "source_version": "arXiv:1810.04805v2",
+  "queries": [
+    {
+      "id": "bert1",
+      "question": "What architecture is described in the title of the paper?",
+      "page": 1,
+      "anchor": "Deep Bidirectional Transformers"
+    },
+    {
+      "id": "bert2",
+      "question": "What kind of self-attention does the BERT Transformer use?",
+      "page": 3,
+      "anchor": "bidirectional self-attention"
+    },
+    {
+      "id": "bert3",
+      "question": "What two stages make up the BERT framework?",
+      "page": 3,
+      "anchor": "pre-training and ﬁne-tuning"
+    },
+    {
+      "id": "bert4",
+      "question": "What architecture does BERT use?",
+      "page": 3,
+      "anchor": "multi-layer bidirectional Transformer"
+    },
+    {
+      "id": "bert5",
+      "question": "How many attention heads does BERT base use?",
+      "page": 3,
+      "anchor": "A=12"
+    },
+    {
+      "id": "bert6",
+      "question": "What token is used as a separator?",
+      "page": 4,
+      "anchor": "token ([SEP])"
+    },
+    {
+      "id": "bert7",
+      "question": "What fraction of WordPiece tokens are selected for masking?",
+      "page": 4,
+      "anchor": "mask 15%"
+    },
+    {
+      "id": "bert8",
+      "question": "What is the next sentence prediction task?",
+      "page": 4,
+      "anchor": "binarized next"
+    },
+    {
+      "id": "bert9",
+      "question": "What corpora were used to pretrain BERT?",
+      "page": 5,
+      "anchor": "BooksCorpus"
+    },
+    {
+      "id": "bert10",
+      "question": "How many layers does BERT base have?",
+      "page": 3,
+      "anchor": "L=12"
+    }
+  ]
+}

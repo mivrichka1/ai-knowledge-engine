@@ -1,0 +1,188 @@
+{
+  "name": "attention-seed-v4",
+  "description": "Thirty selected anchor questions, partial relevance labels without independent review.",
+  "source": "https://arxiv.org/abs/1706.03762",
+  "source_version": "arXiv:1706.03762v7",
+  "queries": [
+    {
+      "id": "q1",
+      "question": "What replaces recurrence and convolutions in the Transformer?",
+      "page": 1,
+      "anchor": "based solely on attention mechanisms"
+    },
+    {
+      "id": "q2",
+      "question": "What does self-attention relate within a sequence?",
+      "page": 2,
+      "anchor": "attention mechanism relating different positions"
+    },
+    {
+      "id": "q3",
+      "question": "How many layers are in the original encoder stack?",
+      "page": 3,
+      "anchor": "stack of N = 6 identical layers"
+    },
+    {
+      "id": "q4",
+      "question": "How is the dot product scaled before softmax?",
+      "page": 4,
+      "anchor": "divide each by"
+    },
+    {
+      "id": "q5",
+      "question": "How does the decoder prevent attending to future positions?",
+      "page": 3,
+      "anchor": "prevent positions from attending to subsequent positions"
+    },
+    {
+      "id": "q6",
+      "question": "How many attention heads does the model use?",
+      "page": 5,
+      "anchor": "h = 8 parallel attention layers"
+    },
+    {
+      "id": "q7",
+      "question": "Which functions are used for positional encoding?",
+      "page": 6,
+      "anchor": "sine and cosine functions"
+    },
+    {
+      "id": "q8",
+      "question": "Approximately how many sentence pairs are in the English-German training dataset?",
+      "page": 7,
+      "anchor": "about 4.5 million"
+    },
+    {
+      "id": "q9",
+      "question": "Which GPUs were used for training?",
+      "page": 7,
+      "anchor": "8 NVIDIA P100 GPUs"
+    },
+    {
+      "id": "q10",
+      "question": "What label smoothing value was used?",
+      "page": 8,
+      "anchor": "label smoothing of value"
+    },
+    {
+      "id": "q11",
+      "question": "What activation is used between feed-forward linear transformations?",
+      "page": 5,
+      "anchor": "ReLU activation"
+    },
+    {
+      "id": "q12",
+      "question": "What is the dimensionality of the inner feed-forward layer?",
+      "page": 5,
+      "anchor": "inner-layer has dimensionality"
+    },
+    {
+      "id": "q13",
+      "question": "Where do the keys and values in encoder-decoder attention come from?",
+      "page": 5,
+      "anchor": "output of the encoder"
+    },
+    {
+      "id": "q14",
+      "question": "Where are positional encodings added?",
+      "page": 6,
+      "anchor": "input embeddings"
+    },
+    {
+      "id": "q15",
+      "question": "What is one proposed way to improve performance for very long sequences?",
+      "page": 7,
+      "anchor": "neighborhood of size r"
+    },
+    {
+      "id": "q16",
+      "question": "How many English-French training sentences are used?",
+      "page": 7,
+      "anchor": "36M sentences"
+    },
+    {
+      "id": "q17",
+      "question": "How many warmup steps were used?",
+      "page": 7,
+      "anchor": "warmup_steps = 4000"
+    },
+    {
+      "id": "q18",
+      "question": "Which optimizer was used during Transformer training?",
+      "page": 7,
+      "anchor": "Adam optimizer"
+    },
+    {
+      "id": "q19",
+      "question": "What beam size was used at inference?",
+      "page": 8,
+      "anchor": "beam size of 4"
+    },
+    {
+      "id": "q20",
+      "question": "How often were checkpoints written for the base model?",
+      "page": 8,
+      "anchor": "10-minute intervals"
+    },
+    {
+      "id": "q21",
+      "question": "How did learned positional embeddings compare with sinusoidal encodings?",
+      "page": 6,
+      "anchor": "nearly identical results"
+    },
+    {
+      "id": "q22",
+      "question": "Where do encoder-decoder attention queries originate?",
+      "page": 5,
+      "anchor": "previous decoder layer"
+    },
+    {
+      "id": "q23",
+      "question": "Where do encoder self-attention keys values and queries originate?",
+      "page": 5,
+      "anchor": "output of the previous layer"
+    },
+    {
+      "id": "q24",
+      "question": "How are illegal decoder attention connections blocked?",
+      "page": 5,
+      "anchor": "masking out"
+    },
+    {
+      "id": "q25",
+      "question": "What is the input and output embedding dimensionality?",
+      "page": 5,
+      "anchor": "dmodel = 512"
+    },
+    {
+      "id": "q26",
+      "question": "What is the approximate shared English-German vocabulary size?",
+      "page": 7,
+      "anchor": "37000 tokens"
+    },
+    {
+      "id": "q27",
+      "question": "How many tokens from each side are in a training batch?",
+      "page": 7,
+      "anchor": "25000 source tokens"
+    },
+    {
+      "id": "q28",
+      "question": "How long did the base model train?",
+      "page": 7,
+      "anchor": "100,000 steps"
+    },
+    {
+      "id": "q29",
+      "question": "What number of training steps was used for big models?",
+      "page": 7,
+      "anchor": "300,000 steps"
+    },
+    {
+      "id": "q30",
+      "question": "What dropout rate was used for the base model?",
+      "page": 8,
+      "anchor": "Pdrop = 0.1"
+    }
+  ]
+}

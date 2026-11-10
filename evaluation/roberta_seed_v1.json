@@ -1,0 +1,68 @@
+{
+  "name": "roberta-seed-v1",
+  "description": "Ten anchor questions; partial labels, not exhaustive relevance judgments.",
+  "source": "https://arxiv.org/abs/1907.11692",
+  "source_version": "arXiv:1907.11692v1",
+  "queries": [
+    {
+      "id": "roberta1",
+      "question": "What does RoBERTa investigate about BERT pretraining?",
+      "page": 1,
+      "anchor": "replication study"
+    },
+    {
+      "id": "roberta2",
+      "question": "Which software framework was used to reimplement BERT?",
+      "page": 2,
+      "anchor": "FAIRSEQ"
+    },
+    {
+      "id": "roberta3",
+      "question": "What maximum sequence length is used in pretraining?",
+      "page": 3,
+      "anchor": "T = 512"
+    },
+    {
+      "id": "roberta4",
+      "question": "Which GPUs did RoBERTa use for training?",
+      "page": 3,
+      "anchor": "Nvidia V100 GPUs"
+    },
+    {
+      "id": "roberta5",
+      "question": "How many English language corpora were considered?",
+      "page": 3,
+      "anchor": "ﬁve English-language corpora"
+    },
+    {
+      "id": "roberta6",
+      "question": "How does dynamic masking differ from static masking?",
+      "page": 4,
+      "anchor": "generate the masking pattern"
+    },
+    {
+      "id": "roberta7",
+      "question": "What does FULL-SENTENCES do with the NSP loss?",
+      "page": 5,
+      "anchor": "remove the NSP loss"
+    },
+    {
+      "id": "roberta8",
+      "question": "Which masking approaches are compared in Table 1?",
+      "page": 4,
+      "anchor": "static and dynamic"
+    },
+    {
+      "id": "roberta9",
+      "question": "What byte-level encoding does RoBERTa use?",
+      "page": 6,
+      "anchor": "byte-level BPE"
+    },
+    {
+      "id": "roberta10",
+      "question": "What size is the byte-level BPE vocabulary?",
+      "page": 6,
+      "anchor": "containing 50K sub-"
+    }
+  ]
+}

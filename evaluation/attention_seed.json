@@ -1,0 +1,13 @@
+{
+  "name": "attention-seed-v1",
+  "description": "Five manually checked anchor questions on the open arXiv paper. Partial relevance labels; not a general benchmark.",
+  "source": "https://arxiv.org/abs/1706.03762",
+  "source_version": "arXiv:1706.03762v7",
+  "queries": [
+    {"id":"q1","question":"What replaces recurrence and convolutions in the Transformer?","page":1,"anchor":"based solely on attention mechanisms"},
+    {"id":"q2","question":"What does self-attention relate within a sequence?","page":2,"anchor":"attention mechanism relating different positions"},
+    {"id":"q3","question":"How many layers are in the original encoder stack?","page":3,"anchor":"stack of N = 6 identical layers"},
+    {"id":"q4","question":"How is the dot product scaled before softmax?","page":4,"anchor":"divide each by"},
+    {"id":"q5","question":"How does the decoder prevent attending to future positions?","page":3,"anchor":"prevent positions from attending to subsequent positions"}
+  ]
+}

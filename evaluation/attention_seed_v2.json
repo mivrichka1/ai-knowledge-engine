@@ -1,0 +1,68 @@
+{
+  "name": "attention-seed-v2",
+  "description": "Ten manually checked anchor questions on one arXiv paper. Partial relevance labels; not a general benchmark.",
+  "source": "https://arxiv.org/abs/1706.03762",
+  "source_version": "arXiv:1706.03762v7",
+  "queries": [
+    {
+      "id": "q1",
+      "question": "What replaces recurrence and convolutions in the Transformer?",
+      "page": 1,
+      "anchor": "based solely on attention mechanisms"
+    },
+    {
+      "id": "q2",
+      "question": "What does self-attention relate within a sequence?",
+      "page": 2,
+      "anchor": "attention mechanism relating different positions"
+    },
+    {
+      "id": "q3",
+      "question": "How many layers are in the original encoder stack?",
+      "page": 3,
+      "anchor": "stack of N = 6 identical layers"
+    },
+    {
+      "id": "q4",
+      "question": "How is the dot product scaled before softmax?",
+      "page": 4,
+      "anchor": "divide each by"
+    },
+    {
+      "id": "q5",
+      "question": "How does the decoder prevent attending to future positions?",
+      "page": 3,
+      "anchor": "prevent positions from attending to subsequent positions"
+    },
+    {
+      "id": "q6",
+      "question": "How many attention heads does the model use?",
+      "page": 5,
+      "anchor": "h = 8 parallel attention layers"
+    },
+    {
+      "id": "q7",
+      "question": "Which functions are used for positional encoding?",
+      "page": 6,
+      "anchor": "sine and cosine functions"
+    },
+    {
+      "id": "q8",
+      "question": "Approximately how many sentence pairs are in the English-German training dataset?",
+      "page": 7,
+      "anchor": "about 4.5 million"
+    },
+    {
+      "id": "q9",
+      "question": "Which GPUs were used for training?",
+      "page": 7,
+      "anchor": "8 NVIDIA P100 GPUs"
+    },
+    {
+      "id": "q10",
+      "question": "What label smoothing value was used?",
+      "page": 8,
+      "anchor": "label smoothing of value"
+    }
+  ]
+}
