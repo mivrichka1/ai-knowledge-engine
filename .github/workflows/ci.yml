@@ -1,0 +1,49 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: ake
+          POSTGRES_PASSWORD: test
+          POSTGRES_DB: ake_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U ake -d ake_test"
+          --health-interval 5s --health-timeout 5s --health-retries 20
+    defaults:
+      run:
+        working-directory: backend
+    env:
+      DATABASE_URL: postgresql+asyncpg://ake:test@localhost:5432/ake_test
+      TEST_POSTGRES_URL: postgresql+asyncpg://ake:test@localhost:5432/ake_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-dev.txt
+      - run: ruff check ake_backend tests alembic
+      - run: mypy ake_backend --ignore-missing-imports
+      - run: alembic upgrade head
+      - run: alembic check
+      - run: python -m pytest tests ../tests --cov=ake_backend --cov-report=term --cov-report=xml -q
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22', cache: npm, cache-dependency-path: frontend/package-lock.json}
+      - run: npm ci
+      - run: npm run build
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t ake-backend ./backend
+      - run: docker build -t ake-frontend ./frontend
