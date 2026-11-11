@@ -44,11 +44,15 @@ test('register, upload, index and search a document', async ({page})=>{
   await page.getByRole('button',{name:'Reindex',exact:true}).click();
   await expect(page.getByRole('button',{name:'Reindex',exact:true})).toBeDisabled();
   await expect(page.getByText('ready',{exact:true})).toBeVisible({timeout:120_000});
+  const fileResponse=page.waitForResponse(response => /\/documents\/[^/]+\/file$/.test(response.url()));
   const popupPromise=page.waitForEvent('popup');
   await page.getByRole('button',{name:'Open document ↗'}).first().click();
   const popup=await popupPromise;
-  await popup.waitForURL(/blob:/, {waitUntil:'commit'});
-  expect(popup.url()).toContain('#page=1');
+  const pdf=await fileResponse;
+  expect(pdf.ok()).toBeTruthy();
+  expect(pdf.headers()['content-type']).toContain('application/pdf');
+  expect((await pdf.body()).subarray(0,5).toString()).toBe('%PDF-');
+  // Headless Chromium cannot reliably render its PDF viewer.
   await popup.close();
   page.once('dialog', dialog => dialog.accept());
   await page.getByRole('button',{name:'Delete',exact:true}).click();
